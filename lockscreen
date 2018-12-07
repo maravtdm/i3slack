@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# if "off" is given as parameter, then spawn a new thread to turn off the screen
+[ "$1" = "off" ] && $(sleep 5 && xset s on && xset dpms force on) &
+
+# this must be the last command, and it must be 'non forking', as expected by 'xautolock'
+i3lock -n -e -f -i ~/Images/bricks.png -t
