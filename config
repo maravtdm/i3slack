@@ -28,7 +28,6 @@ bindsym $mod+l exec --no-startup-id ~/.config/i3/lockscreen off
 bindsym $mod+Tab exec python3 /.config/i3/quickswitch.py -o
 
 bindsym $mod+F1 exec firefox
-#bindsym $mod+F2 exec chromium
 bindsym $mod+F2 exec thunderbird
 bindsym $mod+F3 exec caja
 bindsym $mod+F4 exec pcmanfm
@@ -219,8 +218,4 @@ bar {
 }
             
 exec --no-startup-id $XDG_CONFIG_HOME/i3/autostart
-#exec --no-startup-id bmpanel2 
-#exec_always --no-startup-id ~/.config/polybar/launch.sh
-#exec_always --no-startup-id xcompmgr  
-#exec_always --no-startup-id feh --bg-scale $XDG_CONFIG_HOME/i3/officiel.png &
-#exec_always --no-startup-id conky -c ~/.conkyrc -d 
+
