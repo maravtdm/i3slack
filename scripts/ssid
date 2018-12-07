@@ -1,0 +1,21 @@
+#!/bin/sh
+
+SSID=$(iw dev wlan0 link | awk '/SSID/ {print $2}')
+RATE=$(iw dev wlan0 link | awk '/tx bitrate/ {print $3}')
+CHAN=$(iw dev wlan0 info | awk '/channel/ {print $2}')
+ADDR=$(ip addr show wlan0 | awk '/inet / {print $2}' | cut -d"/" -f1)
+STATE=$(iw dev wlan0 link | head -1 | awk '{print $1}')
+
+#echo $SSID $ADDR "("$RATE M/s")"
+#echo $SSID "("$RATE M/s")"
+
+if [[ "$BLOCK_BUTTON" -eq 1 ]]; then
+	message="$ADDR ($RATE M/s canal $CHAN)"
+else
+	message=$SSID
+fi
+if [[ "$STATE" == "Not" ]]; then
+	echo ""
+else
+	echo $message
+fi

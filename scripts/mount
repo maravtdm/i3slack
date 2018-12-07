@@ -1,0 +1,22 @@
+#!/bin/bash
+
+device="${BLOCK_INSTANCE:-doc}"
+mount | grep ${device} >/dev/null 2>&1
+status=$?
+
+URGENT_VALUE=1
+
+if [[ "${status}" == "0" ]]; then
+    echo " doc"
+    #${device}: "
+    #echo ""
+  else
+    echo " "
+    #${device}: "
+fi
+#if [[ ${status} -le ${URGENT_VALUE} ]]
+#	then
+#	exit 33
+#	fi
+#fi
+

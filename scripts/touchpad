@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+STATUS16=$(xinput list-props 16 | awk '/Device Enabled/ {print $4}')
+STATUS17=$(xinput list-props 17 | awk '/Device Enabled/ {print $4}')
+
+if [ $STATUS16 == "1" ] ; then
+	if [ $STATUS17 == "1" ] ; then
+	xinput disable 16
+	xinput disable 17
+	fi
+else
+	xinput enable 16
+	xinput enable 17
+fi
+
+#if [ $STATUS17 == "1" ] ; then
+#	xinput disable 17
+#else
+#	xinput enable 17
+#fi
+

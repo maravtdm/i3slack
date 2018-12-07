@@ -1,0 +1,13 @@
+#!/bin/sh
+
+KERNEL=$(uname -r)
+VERS=$(w3m -dump https://www.kernel.org | awk '/stable/ {print $2}' | head -1)
+
+if [[ "$BLOCK_BUTTON" -eq 1 ]]; then
+	message="Stable: $VERS"
+else
+	message="$KERNEL"
+fi
+
+echo "$message"
+
