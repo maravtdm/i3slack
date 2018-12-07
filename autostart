@@ -5,6 +5,7 @@ setxkbmap fr &
 tilda &
 nm-applet &
 nextcloud &
+compton -S --config $HOME/.config/i3/compton.conf &
 
 feh --bg-scale $HOME/.config/i3/classic.png &
 
