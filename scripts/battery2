@@ -15,14 +15,14 @@ elif [[ ${BATTERY_POWER} -lt "60" ]]; then
 BATTERY_ICON=
 elif [[ ${BATTERY_POWER} -lt "80" ]]; then
 BATTERY_ICON=
-elif [[ ${BATTERY_POWER} -gt "99" ]]; then
+elif [[ ${BATTERY_POWER} -lt "100" ]]; then
 BATTERY_ICON=
 fi
 
 if [[ ${BATTERY_STATE} = "Charging" ]]; then
-	echo "  ${BATTERY_ICON} ${BATTERY_POWER}% (${BATTERY_TIME})"
+	echo "  ${BATTERY_ICON} ${BATTERY_POWER}% (${BATTERY_TIME})"
 elif [[ "${BATTERY_STATE}" = "Discharging" ]]; then
-	echo "  ${BATTERY_ICON} ${BATTERY_POWER}% (${BATTERY_TIME})"
+	echo "${BATTERY_ICON} ${BATTERY_POWER}% (${BATTERY_TIME})"
 else
 	echo "  ${BATTERY_POWER}%"
 fi
