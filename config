@@ -31,6 +31,7 @@ bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec thunderbird
 bindsym $mod+F3 exec caja
 bindsym $mod+F4 exec pcmanfm
+bindsym $mod+F5 exec chromium
 
 bindsym Print exec import -screen ~/Images/Screenshots/`date "+%Y%m%d-%T"`-screenshot.png
 bindsym Shift+Print exec import -window root ~/Images/Screenshots/`date "+%Y%m%d-%T"`-screenshot.png
