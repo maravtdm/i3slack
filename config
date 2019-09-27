@@ -20,10 +20,12 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+o exec xset dpms force on
 
-bindsym $mod+Return exec lxterminal
+#bindsym $mod+Return exec lxterminal
+bindsym $mod+Return exec termite
 bindsym $mod+d exec dmenu_run -p Slackware
 bindsym $mod+i exec xterm -e ~/.config/i3//i3-get-window
 bindsym $mod+l exec --no-startup-id ~/.config/i3/lockscreen off
+bindsym twosuperior exec xfce4-terminal --drop-down
 
 bindsym $mod+Tab exec python3 /.config/i3/quickswitch.py -o
 

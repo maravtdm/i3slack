@@ -2,7 +2,8 @@
 
 # Clavier fr
 setxkbmap fr &
-tilda &
+xfce4-terminal --drop-down &
+#tilda &
 nm-applet &
 nextcloud &
 compton -S --config $HOME/.config/i3/compton.conf &
