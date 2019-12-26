@@ -29,7 +29,8 @@ bindsym twosuperior exec xfce4-terminal --drop-down
 
 bindsym $mod+Tab exec python3 /.config/i3/quickswitch.py -o
 
-bindsym $mod+F1 exec firefox
+#bindsym $mod+F1 exec firefox
+bindsym $mod+F1 exec ~/Programmes/brave/brave
 bindsym $mod+F2 exec thunderbird
 bindsym $mod+F3 exec caja
 bindsym $mod+F4 exec pcmanfm
@@ -212,7 +213,7 @@ client.urgent 			#d33682 #d33682 #fdf6e3 #dc322f
 bar {
 	status_command		i3blocks -c ~/.config/i3/i3blocks.conf
 ##	status_command		i3status -c ~/.config/i3/i3status.conf
-##	position 		top
+	position 		top
 	mode			dock
 	font			pango:Source Sans Pro-8 8
 ##	font			pango:DejaVu Sans Mono 8
