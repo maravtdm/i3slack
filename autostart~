@@ -3,6 +3,7 @@
 # Clavier fr
 setxkbmap fr &
 xfce4-terminal --drop-down &
+#tilda &
 nm-applet &
 nextcloud &
 compton -S --config $HOME/.config/i3/compton.conf &
@@ -13,11 +14,9 @@ feh --bg-scale $HOME/.config/i3/classic.png &
 
 ### Touchpad
 #synclient TapButton1=1 
-
 # clic droit
 #synclient ClickFinger2=3 
 synclient TapButton2=3
-
 # Clic milieu
 #synclient ClickFinger3=2 
 synclient TapButton3=2
@@ -28,7 +27,6 @@ synclient PalmDetect=1
 # Touchpad off
 xinput disable 16
 xinput disable 17
-
 # Power button off
 xinput disable 6
 
