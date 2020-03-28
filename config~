@@ -216,7 +216,7 @@ bar {
 ##	status_command		i3status -c ~/.config/i3/i3status.conf
 	position 		top
 	mode			dock
-	font			pango:Source Sans Pro-8 9
+	font			pango:Source Sans Pro-8 8
 ##	font			pango:DejaVu Sans Mono 8
 	bindsym button4		nop
 	bindsym button5		nop
